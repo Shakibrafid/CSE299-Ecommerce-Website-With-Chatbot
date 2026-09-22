@@ -1,0 +1,673 @@
+FRONTEND PROJECT LEARNING GUIDE
+==============================
+
+This file explains the frontend of this project in a beginner-friendly way.
+It covers all important frontend code files in the project, without skipping any code files.
+Images and non-code files were intentionally ignored.
+
+PROJECT TYPE
+------------
+This frontend is a React + Vite project for an e-commerce website.
+Main technologies:
+- JavaScript / JSX
+- React
+- Vite
+- React Router DOM
+- Tailwind CSS
+
+The frontend manages:
+- home page
+- product list and product detail pages
+- category pages
+- cart page
+- checkout page
+- order history and order detail pages
+- login and registration pages
+- user profile page
+- chat page
+- 404 page
+
+MAIN FOLDER STRUCTURE
+---------------------
+my-app/
+  package.json
+  vite.config.js
+  index.html
+  src/
+    main.jsx
+    App.jsx
+    apiConfig.js
+    index.css
+    App.css
+    components/
+      Navbar.jsx
+    pages/
+      Home.jsx
+      Login.jsx
+      Register.jsx
+      Products.jsx
+      ProductDetail.jsx
+      CategoryList.jsx
+      CategoryDetail.jsx
+      Cart.jsx
+      Checkout.jsx
+      OrderHistory.jsx
+      OrderDetails.jsx
+      Profile.jsx
+      Chat.jsx
+      NotFound.jsx
+
+BEGINNER CONCEPTS YOU NEED TO KNOW
+----------------------------------
+1. React = UI library
+   It creates reusable UI components.
+
+2. JSX = JavaScript + HTML-like syntax
+   Example: <div className="bg-white">Hello</div>
+
+3. Component = a reusable block of UI
+   Example: Navbar, Login, Product card
+
+4. State = data that can change during runtime
+   useState() stores data like product list, message text, cart items.
+
+5. useEffect() = code that runs after component loads or when something changes.
+   This is used to fetch data from the backend.
+
+6. Routing = navigating between pages
+   React Router DOM handles page navigation without refreshing whole app.
+
+7. Fetch = sending HTTP requests to backend
+   fetch('/api/store/products/') sends a request.
+
+8. localStorage = browser storage
+   Used to save accessToken and refreshToken.
+
+9. Tailwind CSS = utility classes for design
+   Example: bg-gray-950, text-indigo-600, rounded-full
+
+------------------------------------------------------------
+FILE-BY-FILE EXPLANATION
+------------------------------------------------------------
+
+FILE: my-app/package.json
+Purpose:
+This file tells Node.js and Vite what dependencies the project needs and which scripts to run.
+
+Important scripts:
+- npm run dev -> starts local development server
+- npm run build -> prepares production build
+- npm run lint -> checks code quality
+- npm run preview -> previews production build
+
+Dependencies:
+- react and react-dom -> core frontend library
+- react-router-dom -> page navigation
+- tailwindcss -> styling
+
+Why it matters:
+This file is the project setup file. If dependencies are missing, the app cannot run.
+
+FILE: my-app/vite.config.js
+Purpose:
+Vite configuration file.
+
+Important parts:
+- plugins: [react(), tailwindcss()]
+  Enables React and Tailwind support.
+
+- server: { host: '0.0.0.0', proxy: {...} }
+  This lets the app run on all interfaces and proxy API requests.
+
+Proxy settings:
+- '/api' -> target 'http://127.0.0.1:8000'
+- '/media' -> target 'http://127.0.0.1:8000'
+
+This means when the frontend calls /api/store/products/, the browser sends the request to the backend running on port 8000.
+
+FILE: my-app/index.html
+Purpose:
+The HTML page that creates the root React app.
+This file usually contains the div with id='root' where React mounts the app.
+Since the project uses Vite, index.html is the entry page before JavaScript runs.
+
+FILE: my-app/src/main.jsx
+Purpose:
+This is the starting JavaScript file for React.
+
+Important lines:
+- import { StrictMode } from 'react'
+  React StrictMode helps detect problems during development.
+- import { createRoot } from 'react-dom/client'
+  Creates the root React app.
+- import './index.css'
+  Loads global CSS.
+- import App from './App.jsx'
+  Loads the main application component.
+
+Then:
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+
+This mounts the App component into the HTML root element.
+
+FILE: my-app/src/App.jsx
+Purpose:
+This is the central router file.
+It defines every page and route in the app.
+
+Important route definitions:
+- / -> Home
+- /login -> Login
+- /register -> Register
+- /products -> Products
+- /products/:id -> ProductDetail
+- /cart -> Cart
+- /checkout -> Checkout
+- /orders -> OrderHistory
+- /orders/:id -> OrderDetail
+- /categories -> CategoryList
+- /categories/:id -> CategoryDetail
+- /profile -> Profile
+- /chat -> Chat
+- '*' -> NotFound
+
+Meaning:
+When a user visits a URL, React Router shows the correct page component.
+
+The app also renders Navbar at the top of every page.
+
+FILE: my-app/src/apiConfig.js
+Purpose:
+This file centralizes API configuration and token helpers.
+
+1. API_BASE
+- API_BASE = import.meta.env.VITE_API_BASE || "";
+- If the project uses an environment variable, it is used.
+- Otherwise it stays empty.
+
+2. getAuthHeaders()
+- Reads accessToken from localStorage.
+- Returns Authorization: Bearer <token>
+
+3. getJsonHeaders()
+- Returns JSON content type and auth headers.
+
+4. getImageUrl(image)
+- Converts backend image paths into usable frontend URLs.
+- If the image is already a full URL, it returns it unchanged.
+- If it starts with /media/ or media/, it builds a final URL.
+
+This file prevents repeated code across every page.
+
+FILE: my-app/src/components/Navbar.jsx
+Purpose:
+This is the website navigation bar.
+
+Important logic:
+- const isLoggedIn = !!localStorage.getItem("accessToken");
+  Checks whether user is logged in by looking at stored token.
+
+- handleLogout()
+  Removes accessToken and refreshToken from localStorage and redirects to /login.
+
+Menu items:
+- Products
+- Categories
+- Orders
+- Chat
+- Cart
+- Profile
+
+If logged in:
+- Shows Logout button
+If not logged in:
+- Shows Login and Register links
+
+This makes the navigation responsive to authentication state.
+
+FILE: my-app/src/pages/Home.jsx
+Purpose:
+This is the landing page.
+
+Key concepts:
+- useState([]) creates the featuredProducts state.
+- useEffect(() => { fetch(...) }, [])
+  Runs once when page loads.
+
+The fetch:
+fetch(`${API_BASE}/api/store/products/`)
+This sends a request to the backend product endpoint.
+
+Then it filters products:
+const featured = products.filter((product) => product.is_featured);
+If featured products exist, those are shown.
+If not, it displays the first three products.
+
+The page renders a hero section and a grid of featured products.
+
+For each product:
+- use product.images[0].image or product.image as a display image
+- show product name, description, price
+- render link to product detail page
+
+This is a good example of how frontend fetches data and displays it.
+
+FILE: my-app/src/pages/Login.jsx
+Purpose:
+This is the login page.
+
+State variables:
+- email
+- password
+- error
+
+handleSubmit(e)
+- Prevents page reload.
+- Sends POST request to /api/token/
+- Sends JSON: { username: email, password }
+
+Important note:
+The backend expects username, and this frontend sends email as username.
+Even though the field is called email, backend accepts it because the Register page uses username = email.
+
+After successful login:
+- localStorage.setItem("accessToken", data.access)
+- localStorage.setItem("refreshToken", data.refresh)
+- navigate("/products")
+
+This means after login the user is taken to the products page.
+
+If login fails:
+- error message is shown. 
+
+FILE: my-app/src/pages/Register.jsx
+Purpose:
+This is the registration page.
+
+State variables:
+- firstName
+- lastName
+- email
+- password
+- phone
+- error
+
+handleSubmit(e)
+- Sends POST request to /api/accounts/register/
+- JSON body contains:
+  {
+    username: email,
+    email,
+    password,
+    phone,
+  }
+
+Then if response is OK:
+- navigate('/login')
+
+This sends the user to the login page after successful signup.
+
+Important note:
+The frontend stores firstName and lastName in local state but does not send them to the backend. The backend register endpoint only expects username, email, password, and phone.
+
+FILE: my-app/src/pages/Products.jsx
+Purpose:
+This page displays the full product catalog.
+
+State variables:
+- products = product list
+- search = search text
+
+useEffect() fetches products from backend:
+fetch(`${API_BASE}/api/store/products/`)
+
+Then:
+const filteredProducts = products.filter((product) =>
+  product.name.toLowerCase().includes(search.toLowerCase())
+);
+
+This filters products by the search text typed by user.
+
+addToCart(product)
+- Reads accessToken from localStorage.
+- Sends POST request to /api/cart/cart-items/
+- JSON body: { product: product.id, quantity: 1 }
+- Shows alert when item is added.
+
+Product card layout:
+- Image
+- Product name
+- Description
+- Price
+- Add to Cart button
+
+The app uses Link from react-router-dom to send the user to the product detail route.
+
+FILE: my-app/src/pages/ProductDetail.jsx
+Purpose:
+This page shows details for one specific product.
+
+useParams() gets the id from the route:
+const { id } = useParams();
+
+useEffect() fetches the single product:
+fetch(`${API_BASE}/api/store/products/${id}/`)
+
+Then the page renders:
+- big main image
+- product name
+- price
+- compare price if available
+- product description
+- stock information
+- add to cart button
+
+addToCart() sends the product ID to the cart endpoint.
+
+The page also uses a placeholder image if no product image exists.
+
+FILE: my-app/src/pages/CategoryList.jsx
+Purpose:
+This page lists all categories.
+
+useEffect() fetches categories from:
+/api/store/categories/
+
+Then it maps over categories and creates cards.
+Each category card includes:
+- image
+- name
+- description
+- link to /categories/:id
+
+The page uses getImageUrl() to build displayable image paths.
+
+FILE: my-app/src/pages/CategoryDetail.jsx
+Purpose:
+This page shows one category and all products inside it.
+
+There are two API calls:
+1. fetch category data
+   /api/store/categories/${id}/
+2. fetch products in this category
+   /api/store/products/?category=${id}
+
+This page:
+- shows category title and description
+- displays products in the category as cards
+- allows the user to add a product into cart
+
+This is a good example of using query parameters in fetch.
+
+FILE: my-app/src/pages/Cart.jsx
+Purpose:
+This is the shopping cart page.
+
+State:
+- cart = current cart items
+- error = error message
+- loading = initial loading status
+
+useEffect()
+- reads accessToken from localStorage
+- if token exists, it fetches /api/cart/cart-items/
+- if no token, it hides cart and says log in
+
+removeFromCart(id)
+- Sends DELETE to /api/cart/cart-items/:id/
+- Removes item from local cart state.
+
+updateQuantity(id, delta)
+- Finds item from cart state.
+- Increases or decreases quantity
+- Sends PATCH request to update backend quantity.
+- If quantity becomes <=0, item is deleted.
+
+total calculation:
+const total = cart.reduce((sum, item) => {
+  const unitPrice = Number(item.price ?? item.price_at_add ?? item.product_detail?.price ?? 0);
+  return sum + unitPrice * Number(item.quantity ?? 1);
+}, 0);
+
+This computes the final total.
+
+UI logic:
+- if not logged in: show login prompt
+- if cart empty: show empty state
+- else: show item list and checkout button
+
+FILE: my-app/src/pages/Checkout.jsx
+Purpose:
+This page lets the user place an order.
+
+State:
+- cart
+- shippingAddress
+- billingAddress
+- paymentMethod
+- error
+
+useEffect() loads cart data from backend.
+
+calculateShippingCost()
+- Returns fixed value 120.
+
+subtotal = cart.reduce(...)
+- sums product prices
+
+handleSubmit(e)
+- Prevents page refresh
+- If user is not logged in, shows error
+- Sends POST request to /api/orders/orders/
+- Body contains shipping_address, billing_address, payment_method
+- If response is OK, navigates to /orders
+
+This is the order creation form.
+
+Important note:
+This page is simpler than the backend model. It does not include tax or discount form inputs, even though the backend supports them.
+
+FILE: my-app/src/pages/OrderHistory.jsx
+Purpose:
+This page shows all orders from the logged-in user.
+
+useEffect() fetches:
+fetch(`${API_BASE}/api/orders/orders/`, { headers: getAuthHeaders() })
+
+Orders are rendered as rows/cards:
+- order number
+- created date
+- total amount
+- shipping cost
+- view details link
+
+If there are no orders, it shows a message and a Start Shopping button.
+
+FILE: my-app/src/pages/OrderDetails.jsx
+Purpose:
+Shows one order in detail.
+
+useParams() gets the order id from the route.
+
+useEffect() fetches:
+/api/orders/orders/${id}/
+
+Then it renders:
+- shipping address
+- billing address
+- payment method
+- subtotal
+- shipping cost
+- total amount
+
+This is a single-order view.
+
+FILE: my-app/src/pages/Profile.jsx
+Purpose:
+This is the user profile form.
+
+Input fields:
+- addressLine1
+- addressLine2
+- city
+- state
+- postalCode
+- country
+
+handleSubmit(e)
+- Prevents default form behavior
+- logs the data to the console
+
+This page currently does not send data to the backend; it just shows form UI and logs values.
+
+This is a good example of front-end form state management without database save.
+
+FILE: my-app/src/pages/Chat.jsx
+Purpose:
+This is the AI support chat page.
+
+State:
+- message = current input text
+- messages = list of chat messages
+
+Initial message:
+[{ sender: "AI", text: "Hello! How can I assist you today?" }]
+
+sendMessage(e)
+- Prevents empty messages
+- Adds user message to messages array
+- Clears input box
+- Sends POST request to /api/ai/chat/
+- Body: { message: userMessage }
+
+If response is OK:
+- Append AI reply to the messages list.
+
+If error occurs:
+- Append error message.
+
+This page shows how a front-end chat interface communicates with a backend endpoint.
+
+FILE: my-app/src/pages/NotFound.jsx
+Purpose:
+This is the 404 page for invalid URLs.
+
+It renders:
+- 404 large number
+- message
+- button linking back to home page
+
+This is what users see when they visit a page that does not exist.
+
+FILE: my-app/src/index.css
+Purpose:
+Simple global CSS entry file.
+This project uses Tailwind CSS, and the main import is:
+@import "tailwindcss";
+
+This means all utility classes from Tailwind are enabled.
+
+FILE: my-app/src/App.css
+Purpose:
+This file contains legacy CSS styling examples.
+It is not the main styling system for the app because the project uses Tailwind CSS.
+The file includes classes like:
+- .counter
+- .hero
+- #center
+- #next-steps
+- .ticks
+
+This file seems to be leftover boilerplate from a starter template rather than this project’s active UI styling.
+
+HOW THE FRONTEND WORKS AS A WHOLE
+---------------------------------
+The frontend flow is:
+1. Browser loads index.html
+2. React mounts App component into root element
+3. App displays Navbar and routes based on current URL
+4. Each page fetches data from backend using fetch()
+5. Data is stored in React state using useState()
+6. The UI renders this state into HTML
+7. User actions send requests back to backend
+8. Browser updates UI based on the response
+
+EXAMPLE: PRODUCT LOAD FLOW
+-------------------------
+- User visits /products
+- React Router displays Products page
+- useEffect runs on page load
+- fetch('/api/store/products/') executes
+- backend returns JSON list of products
+- setProducts(data) updates state
+- map() renders each product card
+
+EXAMPLE: LOGIN FLOW
+-------------------
+- User fills form and clicks Login
+- handleSubmit sends POST request to /api/token/
+- backend returns tokens
+- frontend stores tokens in localStorage
+- app redirects to /products
+- Navbar updates because localStorage token exists
+
+EXAMPLE: CART FLOW
+------------------
+- User clicks Add to Cart on product page
+- POST request hits /api/cart/cart-items/
+- Backend creates cart item for current user
+- User visits /cart
+- fetch gets all cart items
+- items are rendered and subtotal is calculated
+
+WHY THIS FRONTEND IS GOOD FOR LEARNING
+-------------------------------------
+This frontend teaches the most important React patterns:
+- functional components
+- props and state
+- useEffect for data loading
+- fetch API requests
+- routing
+- localStorage for auth persistence
+- conditional rendering
+- component-driven design
+
+If you want to build your own app, focus on mastering these patterns:
+1. one component = one job
+2. fetch data in useEffect
+3. store response in state
+4. render state in JSX
+5. let user interaction trigger API calls
+
+COMMON BEGINNER MISTAKES IN THIS PROJECT
+----------------------------------------
+- assuming all pages are connected to backend automatically
+- forgetting to include Authorization headers for protected routes
+- not understanding that localStorage tokens are browser-based and not secure for sensitive data
+- forgetting that React pages re-render when state changes
+- confusing Route path variables like /orders/:id with actual URL values
+
+FINAL SUMMARY
+-------------
+This frontend is a complete React e-commerce client for an e-commerce API.
+It uses:
+- React Router for page navigation
+- fetch to communicate with Django backend
+- localStorage for JWT token handling
+- Tailwind CSS for styling
+- modular pages for store, cart, orders, chat, and auth
+
+It is a good beginner project because it combines real API communication, user flows, and UI rendering.
+
+If you want to advance from beginner to intermediate, practice these next:
+1. Understand one page completely before moving to the next.
+2. Rebuild one page without looking at the code.
+3. Add a new feature like a search bar, sorting, or favorites.
+4. Learn how to show loading and error states more professionally.
+
+END OF FRONTEND GUIDE
+---------------------

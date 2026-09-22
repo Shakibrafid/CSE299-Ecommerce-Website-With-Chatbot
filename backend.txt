@@ -1,0 +1,768 @@
+BACKEND PROJECT LEARNING GUIDE
+=============================
+
+This file explains the backend of this project in a beginner-friendly way.
+It covers all important code files in the backend, without skipping any code files.
+Images and non-code files were intentionally ignored.
+
+PROJECT TYPE
+------------
+This backend is a Django REST API project for an e-commerce website.
+Main technologies:
+- Python
+- Django
+- Django REST Framework (DRF)
+- SQLite database
+- JWT token authentication
+- CORS for frontend communication
+
+The backend manages:
+- user registration and login
+- store categories and products
+- shopping cart items
+- orders and payments
+- AI chat support
+- notifications and settings
+- profile data
+
+MAIN FOLDER STRUCTURE
+---------------------
+Back/
+  manage.py
+  requirements.txt
+  db.sqlite3
+  backend/
+    __init__.py
+    asgi.py
+    settings.py
+    urls.py
+    permissions.py
+    wsgi.py
+  accounts/
+  cart/
+  chat/
+  core/
+  orders/
+  store/
+
+Understanding this structure:
+- manage.py starts the Django project.
+- backend/ contains project-level settings and router URLs.
+- Each app folder handles one business area.
+- A Django app usually has: models.py, serializers.py, views.py, urls.py, admin.py.
+
+THINK OF THE BACKEND LIKE THIS
+-----------------------------
+A backend works like this:
+1. The frontend sends an HTTP request.
+2. Django receives the request.
+3. URL pattern decides which app handles it.
+4. View function or ViewSet reads or updates database data.
+5. Serializer converts Python objects to JSON and vice versa.
+6. The frontend receives JSON data.
+
+In this project, the frontend sends requests like:
+- /api/store/products/
+- /api/cart/cart-items/
+- /api/orders/orders/
+- /api/accounts/register/
+
+IMPORTANT BEGINNER CONCEPTS USED IN THIS PROJECT
+--------------------------------------------------
+1. Model = database table definition
+   Example: Product, Order, Cart, User
+
+2. Serializer = JSON translator
+   It converts database objects into JSON to send to frontend.
+
+3. View / ViewSet = business logic
+   It receives requests, checks permission, queries database, returns response.
+
+4. URL routes = path mapping
+   It tells Django: 'If user calls this URL, use this view'.
+
+5. Permissions = access control
+   Example: only logged-in user can view own cart
+
+6. JWT = token-based auth
+   Frontend stores accessToken and refreshToken in localStorage.
+
+------------------------------------------------------------
+FILE-BY-FILE EXPLANATION
+------------------------------------------------------------
+
+FILE: Back/manage.py
+Purpose:
+This is the main entry point for the Django project.
+It starts the server and runs commands such as:
+- python manage.py runserver
+- python manage.py migrate
+- python manage.py createsuperuser
+
+Code meaning:
+- os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
+  This tells Django which settings file to use.
+- execute_from_command_line(sys.argv)
+  Runs Django CLI command from terminal.
+
+Why it matters:
+Without this file, Django has no app start command.
+
+FILE: Back/requirements.txt
+Purpose:
+Lists all Python dependencies required by the project.
+
+Important packages:
+- Django==4.2.30 -> web framework
+- djangorestframework -> API library
+- django-cors-headers -> allows browser requests from frontend
+- djangorestframework_simplejwt -> JWT auth
+- Pillow -> image handling
+
+This project uses SQLite, so no database server installation is required.
+
+FILE: Back/backend/settings.py
+Purpose:
+This is the heart of the Django project configuration.
+It controls:
+- installed apps
+- database config
+- auth model
+- middleware
+- CORS
+- JWT config
+- media/static paths
+
+Important sections:
+
+1. BASE_DIR and SECRET_KEY
+- BASE_DIR tells Django where project root is.
+- SECRET_KEY is used for security and sessions.
+- DEBUG = True means development mode.
+
+2. ALLOWED_HOSTS
+- Lists allowed network hosts.
+- Includes localhost and 0.0.0.0.
+
+3. INSTALLED_APPS
+- django.contrib.admin -> admin site
+- django.contrib.auth -> authentication system
+- django.contrib.contenttypes -> content-type support
+- django.contrib.sessions -> session support
+- django.contrib.messages -> flash messages
+- django.contrib.staticfiles -> static files support
+- rest_framework -> DRF
+- corsheaders -> CORS support
+- accounts, cart, chat, core, orders, store -> project apps
+
+4. AUTH_USER_MODEL = 'accounts.User'
+- This tells Django to use the custom User model from accounts app instead of the default one.
+
+5. MIDDLEWARE
+- CORS middleware is placed at top so frontend requests are accepted.
+- SecurityMiddleware protects base requests.
+- SessionMiddleware enables session tracking.
+- CommonMiddleware handles standard request handling.
+- CsrfViewMiddleware protects CSRF attacks.
+- AuthenticationMiddleware attaches user object to requests.
+
+6. DATABASES
+- Uses SQLite database at Back/db.sqlite3.
+- SQLite is simple and great for local development.
+
+7. REST_FRAMEWORK config
+- DEFAULT_AUTHENTICATION_CLASSES includes JWTAuthentication.
+- This means API endpoints require token auth unless permission says otherwise.
+
+8. SIMPLE_JWT config
+- ACCESS_TOKEN_LIFETIME = 60 minutes
+- REFRESH_TOKEN_LIFETIME = 7 days
+- ROTATE_REFRESH_TOKENS = True
+- AUTH_HEADER_TYPES = ('Bearer',)
+- This matches frontend pattern: Authorization: Bearer <token>
+
+9. CORS_ALLOWED_ORIGINS
+- Frontend URLs allowed to connect:
+  - http://localhost:3000
+  - http://localhost:5173
+  - http://127.0.0.1:5173
+- This allows Vite/React frontend to talk to Django backend.
+
+10. MEDIA and STATIC settings
+- MEDIA_URL = '/media/'
+- MEDIA_ROOT = .../media
+- STATIC_ROOT = .../staticfiles
+- This allows product/category images and other uploaded files to be served.
+
+FILE: Back/backend/urls.py
+Purpose:
+This is the main URL configuration for the entire backend.
+It includes all app-level URLs.
+
+Important routes:
+- /admin/ -> Django admin page
+- /api/token/ -> login endpoint
+- /api/token/refresh/ -> refresh JWT
+- /api/accounts/ -> accounts URLs
+- /api/store/ -> store URLs
+- /api/cart/ -> cart URLs
+- /api/orders/ -> orders URLs
+- /api/chat/ -> chat URLs
+- /api/ai/chat/ -> AI chat endpoint
+- /api/core/ -> core URLs
+
+The code at the end:
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+This makes uploaded media files accessible during development.
+
+FILE: Back/backend/permissions.py
+Purpose:
+Custom permission classes.
+These decide who may access which endpoint.
+
+1. IsCustomerUser
+- Only allows authenticated users with is_customer = True.
+- Useful if some endpoints require only customers.
+
+2. IsSupportAgentUser
+- Allows authenticated support agents or staff users.
+- This is used for chat and inventory support.
+
+3. IsOwnerOrStaff
+- Object-level permission.
+- Allows the user to act on their own profile/cart/order only.
+- Staff can also access everything.
+
+How it works:
+- If object has .user, compare obj.user == request.user
+- If object has .user_id, compare with user.id
+- Works for nested relationships such as cart -> user or session -> user
+
+This is important because it prevents one user from viewing another user’s data.
+
+FILE: Back/backend/asgi.py
+Purpose:
+ASGI config for async server support.
+Not heavily used in this project, but standard for Django async deployment.
+
+FILE: Back/accounts/models.py
+Purpose:
+Defines custom user and profile data.
+
+1. User(AbstractUser)
+- Inherits Django's built-in authentication user system.
+- Fields:
+  - created_by -> self-reference; user who created this user
+  - email -> unique email
+  - phone -> optional
+  - is_guest -> guest status
+  - is_customer -> customer flag
+
+2. REQUIRED_FIELDS = ['email']
+- When creating a user from CLI, email is required.
+
+3. Profile model
+- One-to-one relation with User
+- Fields:
+  - address_line1
+  - address_line2
+  - city
+  - state
+  - postal_code
+  - country
+  - profile_picture
+  - created_at, updated_at
+
+Why this matters:
+User is a separate table, profile is separate table but linked 1:1.
+
+FILE: Back/accounts/serializers.py
+Purpose:
+Converts User and Profile data to JSON.
+
+ProfileSerializer:
+- Uses ModelSerializer
+- Serializes profile fields into API format.
+
+UserSerializer:
+- Includes nested profile information.
+- fields = ['id','username','email','phone','is_customer','is_guest','profile']
+
+This allows frontend to request user detail with profile data included.
+
+FILE: Back/accounts/views.py
+Purpose:
+Defines API logic for user profile and registration.
+
+ProfileViewSet
+- Uses ModelViewSet automatically provides basic CRUD endpoints.
+- queryset = Profile.objects.all()
+- serializer_class = ProfileSerializer
+- Permissions: allow any on create, else authenticated and owner/staff.
+
+RegisterAPIView
+- Handles user registration.
+- Accepts username, email, password, phone.
+- Validates required field values.
+- Checks if username or email already exists.
+- Creates a user with create_user.
+- Generates JWT access token and refresh token.
+- Returns them in JSON response.
+
+This grants the frontend a token immediately after signup.
+
+FILE: Back/accounts/urls.py
+Purpose:
+Routes for accounts app.
+- /register/ -> RegisterAPIView
+- router.register(r'profiles', ProfileViewSet, basename='profile')
+This creates endpoints like:
+- /api/accounts/profiles/
+- /api/accounts/profiles/<id>/
+
+FILE: Back/accounts/admin.py
+Purpose:
+Admin customization for users and profiles.
+- ProfileInline makes profile fields appear inside user admin page.
+- CustomUserAdmin customizes admin screen for users.
+- ProfileAdmin handles profile management.
+
+This makes backend management easier in Django admin.
+
+FILE: Back/store/models.py
+Purpose:
+Defines the central product catalog database models.
+
+1. Category
+- name, slug, description
+- parent -> self reference for subcategory hierarchy
+- image -> category image
+- is_active -> soft enable/disable flag
+
+Category is a parent container for products.
+
+2. Product
+- category -> product belongs to one category
+- name, slug, description
+- price, compare_price
+- stock
+- image -> main product image
+- is_active, is_featured, views
+- created_at, updated_at
+
+Why price uses DecimalField:
+- monetary calculations need high precision.
+- Avoid floating-point errors.
+
+3. ProductImage
+- Additional gallery images for product.
+- Many images can belong to one product.
+
+4. Inventory
+- Logs stock changes.
+- quantity_change can be positive or negative.
+- reason explains the change: restock, damaged, audit adjustment
+- created_by records who changed stock
+
+This model tracks product stock movements over time.
+
+FILE: Back/store/serializers.py
+Purpose:
+Serializes category, product, inventory data.
+
+FlexibleImageField
+- Converts image file paths to correct URL paths.
+- Handles absolute URLs, media URLs, or relative paths.
+
+CategorySerializer
+- serializes category details and relationship IDs for products/subcategories.
+
+ProductImageSerializer
+- serializes product gallery images.
+
+InventorySerializer
+- serializes stock movement log.
+
+ProductSerializer
+- includes image, images, and inventory_logs in API responses.
+- read_only_fields includes views, created_at, updated_at
+
+This makes product query responses rich and frontend-friendly.
+
+FILE: Back/store/views.py
+Purpose:
+Defines how product, category, and inventory data are served.
+
+CategoryViewSet
+- query includes only active categories.
+- permissions allow read-only for guests, authenticated users can write.
+
+ProductViewSet
+- serializer_class = ProductSerializer
+- get_queryset filters by is_active=True.
+- Optional category query parameter `?category=<id>` filters products.
+
+InventoryViewSet
+- Only authenticated support agent or admin can access.
+- perform_create assigns created_by_id = self.request.user
+
+This means inventory changes are logged to the person performing them.
+
+FILE: Back/store/urls.py
+Purpose:
+Creates routes for store app.
+Routes:
+- /api/store/categories/
+- /api/store/products/
+- /api/store/inventory/
+
+Django REST framework router automatically generates CRUD endpoints.
+
+FILE: Back/store/admin.py
+Purpose:
+Admin interface for store models.
+- Categories can be activated or deactivated in bulk.
+- Products can be featured or unfeatured.
+- ProductImage gets preview thumbnail in admin.
+- Inventory admin keeps logs visible.
+
+This is for backend management by staff.
+
+FILE: Back/cart/models.py
+Purpose:
+Defines shopping cart data structure.
+
+Cart model:
+- user = OneToOneField with custom User
+- session_id = guest cart identifier
+- created_at, updated_at
+
+This allows a user cart or anonymous guest cart.
+
+CartItem model:
+- cart = foreign key to Cart
+- product = foreign key to Product
+- quantity = number of units
+- price_at_add = snapshot of product price when added
+- unique_together = ('cart', 'product')
+
+This makes sure a product appears only once per cart, and quantity is incremented instead of duplicated.
+
+FILE: Back/cart/serializers.py
+Purpose:
+Handles conversion of cart and cart-item objects to JSON.
+
+CartItemSerializer
+- cart = PrimaryKeyRelatedField(read_only=True)
+- product_detail = ProductSerializer(source='product', read_only=True)
+- price = DecimalField(source='price_at_add', read_only=True)
+
+create() method
+- Gets current request user.
+- Gets or creates cart for that user.
+- If same product already exists, quantity increases.
+- Saves price_at_add snapshot.
+
+update() method
+- If quantity <=0, delete item.
+- Otherwise update quantity.
+
+Why this is important:
+Cart logic is not in frontend only; backend ensures consistent cart data and price snapshots.
+
+FILE: Back/cart/views.py
+Purpose:
+Defines cart access logic.
+
+CartViewSet
+- Only logged-in user can access their cart.
+- get_queryset returns only Cart filtered by request.user.
+
+CartItemViewSet
+- Only logged-in user's cart items are returned.
+- get_serializer_context adds request to serializer so create() can know the current user.
+
+This keeps user cart data private.
+
+FILE: Back/cart/urls.py
+Purpose:
+Registers cart app URLs.
+- /api/cart/carts/
+- /api/cart/cart-items/
+
+FILE: Back/cart/admin.py
+Purpose:
+Admin interface for carts.
+- CartItemInline embeds item rows on cart screen.
+- item_count shows number of items.
+- display_owner shows guest or user ownership.
+
+FILE: Back/orders/models.py
+Purpose:
+Defines order, order item, payment, invoice models.
+
+Order
+- user = order owner
+- order_number = unique identifier
+- status choices: pending, paid, shipped, delivered, cancelled
+- tax, discount, shipping_address, billing_address, payment_method, payment_status, notes
+- subtotal property sums item totals
+- shipping_cost property calculates based on address containing Dhaka or not
+- total_amount property adds subtotal + tax + shipping + subtracts discount
+
+OrderItem
+- order -> parent transaction
+- product -> product sold
+- quantity
+- price -> price snapshot at checkout
+- total property = quantity * price
+
+Payment
+- OneToOne with Order
+- stores payment details and transaction status
+
+Invoice
+- OneToOne with Order
+- stores invoice number and pdf file path
+
+This is the accounting side of the project.
+
+FILE: Back/orders/serializers.py
+Purpose:
+Serializes order, item, payment, invoice data.
+
+OrderItemSerializer
+- includes product detail nested object,
+- calculates total automatically.
+
+OrderSerializer.create()
+- validates user is logged in
+- finds current cart
+- if cart empty, prevents order creation
+- creates order record
+- creates order items from cart items
+- clears cart after order is created
+
+This is how checkout works from backend side.
+
+FILE: Back/orders/views.py
+Purpose:
+Defines order-related API logic.
+
+OrderViewSet
+- If user is staff or support agent, return all orders
+- Else only return the logged-in user's orders
+
+Same logic for PaymentViewSet and InvoiceViewSet.
+
+This keeps order info private while allowing staff to manage it.
+
+FILE: Back/orders/urls.py
+Purpose:
+Creates order-related endpoints.
+- /api/orders/orders/
+- /api/orders/payments/
+- /api/orders/invoices/
+
+FILE: Back/orders/admin.py
+Purpose:
+Admin configuration for orders.
+Shows order records with totals and status.
+
+FILE: Back/chat/models.py
+Purpose:
+Defines support chat backend data.
+
+ChatSession
+- user = customer
+- session_id = unique ID for chat session
+- is_active, is_human_takeover, human_agent
+- started_at, ended_at
+
+ChatMessage
+- belongs to a chat session
+- sender_type = user or bot
+- content = message text
+- is_read = read indicator
+
+ChatMessageAttachment
+- additional file attachments in chat.
+
+HumanSupportSession
+- details for when human support takes over an AI chat session.
+
+This gives structure for an e-commerce support chat system.
+
+FILE: Back/chat/serializers.py
+Purpose:
+Serializes chat-related data.
+- ChatMessageAttachmentSerializer
+- ChatMessageSerializer
+- HumanSupportSessionSerializer
+- ChatSessionSerializer
+
+These allow nested responses with messages and support details.
+
+FILE: Back/chat/views.py
+Purpose:
+Main chat logic.
+
+ChatSessionViewSet
+- staff/support can see active sessions
+- regular users see only their sessions
+
+ChatMessageViewSet
+- similar access rules
+
+HumanSupportSessionViewSet
+- only support agents or staff may access it
+
+AIChatAPIView
+- Accepts a message from the logged-in user.
+- Finds or creates an active chat session.
+- Saves the user's message as ChatMessage.
+- Replies with a static generated message:
+  "Received your message: ... A support agent will respond soon."
+
+This is a simple AI reply placeholder.
+
+FILE: Back/chat/urls.py
+Purpose:
+Registers chat endpoints.
+- /api/chat/sessions/
+- /api/chat/messages/
+- /api/chat/human-support/
+
+FILE: Back/chat/admin.py
+Purpose:
+Admin screen for chat sessions and messages.
+Useful for support staff to inspect chats.
+
+FILE: Back/core/models.py
+Purpose:
+Contains generic app-wide settings and notifications.
+
+Setting model
+- stores key/value configuration pairs like currency or tax rate
+- key is unique
+- value stores actual configuration
+- description explains purpose
+
+Notification model
+- message alert assigned to a user
+- title, message, type, is_read
+
+This is used for app-wide notifications (order alerts, chat alerts, system messages).
+
+FILE: Back/core/serializers.py
+Purpose:
+Serializers for settings and notifications.
+
+FILE: Back/core/views.py
+Purpose:
+ViewSets for settings and notifications.
+- SettingViewSet allows read-only public access or authenticated writes
+- NotificationViewSet restricts notifications to their own user
+
+FILE: Back/core/urls.py
+Purpose:
+Routes for settings and notifications.
+
+FILE: Back/core/admin.py
+Purpose:
+Admin configuration for settings and notifications.
+
+HOW THE BACKEND WORKS AS A WHOLE
+--------------------------------
+The backend flow is:
+1. Browser asks frontend to log in.
+2. Frontend POSTs to /api/token/.
+3. Backend validates username/password and returns JWT tokens.
+4. Frontend stores access token in localStorage.
+5. Frontend makes authenticated requests with Authorization: Bearer <token>.
+6. Django REST Framework checks the token.
+7. ViewSet checks permission rules.
+8. Database query returns data.
+9. Serializer turns data into JSON.
+10. Frontend renders the result.
+
+EXAMPLE: LOGIN FLOW
+-------------------
+- frontend sends username/password to /api/token/
+- Django SimpleJWT creates access + refresh tokens
+- frontend stores them in browser localStorage
+- later requests include Authorization header
+
+EXAMPLE: ORDER FLOW
+-------------------
+1. Frontend fetches cart items.
+2. User enters shipping/billing/payment info.
+3. Frontend posts to /api/orders/orders/
+4. Backend creates order
+5. Backend copies cart items into order items
+6. Backend deletes cart items
+7. Frontend navigates to order history page
+
+EXAMPLE: PRODUCT FLOW
+---------------------
+1. Frontend fetches /api/store/products/
+2. ProductViewSet filters active products.
+3. Serializer includes product image and inventory data.
+4. Frontend displays cards and detail pages.
+
+WHY THIS BACKEND IS GOOD FOR A BEGINNER
+---------------------------------------
+This backend teaches important real-world patterns:
+- models define tables
+- serializers structure JSON responses
+- viewsets handle HTTP logic
+- permissions protect user data
+- routers simplify URL creation
+- JWT handles auth without storing sessions in server memory
+
+If you want to become a Django developer, learn these ideas first:
+- model relationships
+- queryset filtering
+- JSON/API design
+- request/response cycle
+- authentication and authorization
+
+COMMON LEARNING QUESTIONS EXPLAINED
+-----------------------------------
+Q: Why use serializers instead of raw SQL?
+A: Because Django ORM manages database access cleanly and serializers make JSON output easy.
+
+Q: Why use a custom User model?
+A: To add fields like email, phone, and customer flags.
+
+Q: Why use DecimalField for money?
+A: To avoid errors in currency calculations.
+
+Q: Why are permissions important?
+A: So users cannot access each other's data.
+
+Q: Why are URLs under /api/...?
+A: To separate API routes from frontend routes and keep API logical.
+
+FINAL SUMMARY
+-------------
+This backend is a full-stack-ready Django e-commerce API with:
+- auth system
+- product catalog
+- cart and order logic
+- chat support
+- notifications
+- settings
+- admins
+
+Once you understand this backend, the frontend becomes easier because the frontend simply calls these API endpoints and renders the response.
+
+If you want to advance further, the two best next steps are:
+1. Read one app at a time: accounts, store, cart, orders.
+2. Practice by building a small project that uses a simple Django Model, Serializer, and View.
+
+END OF BACKEND GUIDE
+--------------------
