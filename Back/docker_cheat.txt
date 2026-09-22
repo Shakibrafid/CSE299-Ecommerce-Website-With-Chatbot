@@ -1,0 +1,84 @@
+Docker Basics for Django + SQLite
+
+1. Dockerfile (Recipe)
+
+A Dockerfile is a list of instructions describing how to build your
+application image.
+
+Typical steps: - Choose a base image (FROM python:3.12-slim) - Set a
+working directory (WORKDIR /app) - Copy requirements.txt - Install
+dependencies - Copy your project - Specify the startup command (CMD)
+
+Think: Recipe.
+
+2. Image (Blueprint)
+
+An image is a packaged snapshot of: - Operating system libraries -
+Python - Django - Installed packages - Your source code
+
+Images are read-only. You can create many containers from one image.
+
+Flow: Dockerfile -> docker build -> Image
+
+3. Container (Running Application)
+
+A container is a running instance of an image.
+
+It executes your application: python manage.py runserver 0.0.0.0:8000
+
+Containers are temporary. Deleting a container removes everything inside
+it unless stored externally.
+
+Flow: Image -> docker run -> Container
+
+4. Volume (Persistent Storage)
+
+Volumes keep data after containers are removed.
+
+For Django + SQLite: Container | +–> Volume | +–> db.sqlite3
+
+Delete container: Container: removed Volume: still exists
+
+Use volumes for databases and uploaded media.
+
+5. Docker Compose
+
+Docker Compose manages one or more containers.
+
+Example: services: django: build: .
+
+Start: docker compose up
+
+Stop: docker compose down
+
+Docker Lifecycle
+
+Dockerfile | docker build | Image | docker run | Container | Application
+Running
+
+Useful Commands
+
+Build image: docker build -t mydjango .
+
+Run: docker run -p 8000:8000 mydjango
+
+List images: docker images
+
+List containers: docker ps
+
+Stop container: docker stop
+
+Remove container: docker rm
+
+List volumes: docker volume ls
+
+Compose up: docker compose up
+
+Compose down: docker compose down
+
+Summary
+
+Dockerfile = Recipe Image = Packaged application Container = Running
+application Volume = Persistent data
+
+For Django + SQLite, one container is enough.

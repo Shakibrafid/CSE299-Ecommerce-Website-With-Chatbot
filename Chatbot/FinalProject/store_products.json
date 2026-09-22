@@ -1,0 +1,3418 @@
+[
+{
+  "model": "store.category",
+  "pk": 2,
+  "fields": {
+    "name": "Monitor",
+    "slug": "monitor",
+    "description": "monitor is a device",
+    "parent": null,
+    "image": "categories/monitor.png",
+    "is_active": true,
+    "created_at": "2026-07-20T00:13:15.596Z",
+    "updated_at": "2026-08-07T18:24:52.065Z"
+  }
+},
+{
+  "model": "store.category",
+  "pk": 3,
+  "fields": {
+    "name": "Electronics",
+    "slug": "electronics",
+    "description": "Latest gadgets and accessories",
+    "parent": null,
+    "image": "categories/gadgets.png",
+    "is_active": true,
+    "created_at": "2026-08-02T05:12:04.021Z",
+    "updated_at": "2026-08-07T18:21:09.682Z"
+  }
+},
+{
+  "model": "store.category",
+  "pk": 4,
+  "fields": {
+    "name": "Fashion",
+    "slug": "fashion",
+    "description": "Trendy clothing and accessories",
+    "parent": null,
+    "image": "categories/brand.png",
+    "is_active": true,
+    "created_at": "2026-08-02T05:12:04.031Z",
+    "updated_at": "2026-08-07T18:22:10.879Z"
+  }
+},
+{
+  "model": "store.category",
+  "pk": 5,
+  "fields": {
+    "name": "Home & Living",
+    "slug": "home-living",
+    "description": "Furniture and home essentials",
+    "parent": null,
+    "image": "categories/living-room.png",
+    "is_active": true,
+    "created_at": "2026-08-02T05:12:04.040Z",
+    "updated_at": "2026-08-07T18:23:05.230Z"
+  }
+},
+{
+  "model": "store.category",
+  "pk": 6,
+  "fields": {
+    "name": "Sports",
+    "slug": "sports",
+    "description": "Sports gear and fitness accessories",
+    "parent": null,
+    "image": "categories/healthy.png",
+    "is_active": true,
+    "created_at": "2026-08-02T05:12:04.048Z",
+    "updated_at": "2026-08-07T18:24:06.360Z"
+  }
+},
+{
+  "model": "store.category",
+  "pk": 7,
+  "fields": {
+    "name": "Books",
+    "slug": "books",
+    "description": "Reading essentials and educational titles",
+    "parent": null,
+    "image": "categories/stack-of-books.png",
+    "is_active": true,
+    "created_at": "2026-08-02T05:12:04.055Z",
+    "updated_at": "2026-08-07T18:19:08.293Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 2,
+  "fields": {
+    "category": 3,
+    "name": "Wireless Headphones",
+    "slug": "wireless-headphones",
+    "description": "Immersive sound with noise cancellation and 30-hour battery life.",
+    "price": "2490.00",
+    "compare_price": "2990.00",
+    "stock": 25,
+    "image": "products/main/wireless-headphones.png",
+    "is_active": true,
+    "is_featured": true,
+    "views": 0,
+    "created_at": "2026-08-02T05:12:04.065Z",
+    "updated_at": "2026-08-02T05:12:04.065Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 3,
+  "fields": {
+    "category": 3,
+    "name": "Smart Watch",
+    "slug": "smart-watch",
+    "description": "Track fitness, answer calls, and monitor your health in real time.",
+    "price": "3890.00",
+    "compare_price": "4590.00",
+    "stock": 18,
+    "image": "products/main/smart-watch.png",
+    "is_active": true,
+    "is_featured": true,
+    "views": 0,
+    "created_at": "2026-08-02T05:12:04.070Z",
+    "updated_at": "2026-08-02T05:12:04.070Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 4,
+  "fields": {
+    "category": 4,
+    "name": "Casual Denim Jacket",
+    "slug": "casual-denim-jacket",
+    "description": "Lightweight jacket with a modern fit for everyday wear.",
+    "price": "1890.00",
+    "compare_price": "2290.00",
+    "stock": 32,
+    "image": "products/main/casual-denim-jacket.png",
+    "is_active": true,
+    "is_featured": true,
+    "views": 0,
+    "created_at": "2026-08-02T05:12:04.075Z",
+    "updated_at": "2026-08-02T05:12:04.075Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 5,
+  "fields": {
+    "category": 4,
+    "name": "Leather Crossbody Bag",
+    "slug": "leather-crossbody-bag",
+    "description": "Stylish everyday bag with premium finish and multiple compartments.",
+    "price": "2590.00",
+    "compare_price": "3190.00",
+    "stock": 20,
+    "image": "products/main/leather-crossbody-bag.png",
+    "is_active": true,
+    "is_featured": true,
+    "views": 0,
+    "created_at": "2026-08-02T05:12:04.079Z",
+    "updated_at": "2026-08-02T05:12:04.079Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 6,
+  "fields": {
+    "category": 5,
+    "name": "Minimalist Lamp",
+    "slug": "minimalist-lamp",
+    "description": "Soft ambient lighting designed for modern interiors.",
+    "price": "1290.00",
+    "compare_price": "1590.00",
+    "stock": 28,
+    "image": "products/main/minimalist-lamp.png",
+    "is_active": true,
+    "is_featured": true,
+    "views": 0,
+    "created_at": "2026-08-02T05:12:04.084Z",
+    "updated_at": "2026-08-02T05:12:04.084Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 7,
+  "fields": {
+    "category": 5,
+    "name": "Ergonomic Chair",
+    "slug": "ergonomic-chair",
+    "description": "Comfort-first chair with lumbar support for long work sessions.",
+    "price": "4990.00",
+    "compare_price": "5990.00",
+    "stock": 15,
+    "image": "products/main/ergonomic-chair.png",
+    "is_active": true,
+    "is_featured": true,
+    "views": 0,
+    "created_at": "2026-08-02T05:12:04.089Z",
+    "updated_at": "2026-08-02T05:12:04.089Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 8,
+  "fields": {
+    "category": 6,
+    "name": "Running Shoes",
+    "slug": "running-shoes",
+    "description": "Breathable cushion shoes made for daily runs and workouts.",
+    "price": "3190.00",
+    "compare_price": "3790.00",
+    "stock": 22,
+    "image": "products/main/running-shoes.png",
+    "is_active": true,
+    "is_featured": true,
+    "views": 0,
+    "created_at": "2026-08-02T05:12:04.094Z",
+    "updated_at": "2026-08-02T05:12:04.094Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 9,
+  "fields": {
+    "category": 6,
+    "name": "Yoga Mat",
+    "slug": "yoga-mat",
+    "description": "Non-slip mat with extra cushioning for stretching and exercise.",
+    "price": "890.00",
+    "compare_price": "1190.00",
+    "stock": 40,
+    "image": "products/main/yoga-mat.png",
+    "is_active": true,
+    "is_featured": true,
+    "views": 0,
+    "created_at": "2026-08-02T05:12:04.101Z",
+    "updated_at": "2026-08-02T05:12:04.101Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 10,
+  "fields": {
+    "category": 7,
+    "name": "Programming Basics",
+    "slug": "programming-basics",
+    "description": "A practical guide for learning programming from the ground up.",
+    "price": "690.00",
+    "compare_price": "890.00",
+    "stock": 50,
+    "image": "products/main/programming-basics.png",
+    "is_active": true,
+    "is_featured": true,
+    "views": 0,
+    "created_at": "2026-08-02T05:12:04.105Z",
+    "updated_at": "2026-08-02T05:12:04.105Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 11,
+  "fields": {
+    "category": 7,
+    "name": "Creative Writing Handbook",
+    "slug": "creative-writing-handbook",
+    "description": "Inspire your storytelling with actionable writing techniques.",
+    "price": "790.00",
+    "compare_price": "990.00",
+    "stock": 35,
+    "image": "products/main/creative-writing-handbook.png",
+    "is_active": true,
+    "is_featured": true,
+    "views": 0,
+    "created_at": "2026-08-02T05:12:04.110Z",
+    "updated_at": "2026-08-02T05:12:04.110Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 12,
+  "fields": {
+    "category": 2,
+    "name": "Gaming Monitor Pro",
+    "slug": "gaming-monitor-pro",
+    "description": "Gaming Monitor Pro is a high-quality item designed for comfort and performance in this category.",
+    "price": "1170.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/gaming-monitor-pro.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 13,
+  "fields": {
+    "category": 2,
+    "name": "UltraWide Curved Monitor",
+    "slug": "ultrawide-curved-monitor",
+    "description": "UltraWide Curved Monitor is a high-quality item designed for comfort and performance in this category.",
+    "price": "1230.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/ultrawide-curved-monitor.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 14,
+  "fields": {
+    "category": 2,
+    "name": "4K HDR Display",
+    "slug": "4k-hdr-display",
+    "description": "4K HDR Display is a high-quality item designed for comfort and performance in this category.",
+    "price": "1130.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/4k-hdr-display.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 15,
+  "fields": {
+    "category": 2,
+    "name": "27-inch IPS Monitor",
+    "slug": "27-inch-ips-monitor",
+    "description": "27-inch IPS Monitor is a high-quality item designed for comfort and performance in this category.",
+    "price": "1180.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/27-inch-ips-monitor.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 16,
+  "fields": {
+    "category": 2,
+    "name": "Portable USB-C Monitor",
+    "slug": "portable-usb-c-monitor",
+    "description": "Portable USB-C Monitor is a high-quality item designed for comfort and performance in this category.",
+    "price": "1210.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/portable-usb-c-monitor.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 17,
+  "fields": {
+    "category": 2,
+    "name": "144Hz Gaming Monitor",
+    "slug": "144hz-gaming-monitor",
+    "description": "144Hz Gaming Monitor is a high-quality item designed for comfort and performance in this category.",
+    "price": "1190.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/144hz-gaming-monitor.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 18,
+  "fields": {
+    "category": 2,
+    "name": "Business Monitor",
+    "slug": "business-monitor",
+    "description": "Business Monitor is a high-quality item designed for comfort and performance in this category.",
+    "price": "1150.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/business-monitor.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 19,
+  "fields": {
+    "category": 2,
+    "name": "Monitor Stand Bundle",
+    "slug": "monitor-stand-bundle",
+    "description": "Monitor Stand Bundle is a high-quality item designed for comfort and performance in this category.",
+    "price": "1190.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/monitor-stand-bundle.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 20,
+  "fields": {
+    "category": 2,
+    "name": "Eye Care Monitor",
+    "slug": "eye-care-monitor",
+    "description": "Eye Care Monitor is a high-quality item designed for comfort and performance in this category.",
+    "price": "1150.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/eye-care-monitor.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 21,
+  "fields": {
+    "category": 2,
+    "name": "Touchscreen Monitor",
+    "slug": "touchscreen-monitor",
+    "description": "Touchscreen Monitor is a high-quality item designed for comfort and performance in this category.",
+    "price": "1180.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/touchscreen-monitor.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 22,
+  "fields": {
+    "category": 2,
+    "name": "Monitor with Speakers",
+    "slug": "monitor-with-speakers",
+    "description": "Monitor with Speakers is a high-quality item designed for comfort and performance in this category.",
+    "price": "1200.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/monitor-with-speakers.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 23,
+  "fields": {
+    "category": 2,
+    "name": "Monitor Calibration Kit",
+    "slug": "monitor-calibration-kit",
+    "description": "Monitor Calibration Kit is a high-quality item designed for comfort and performance in this category.",
+    "price": "1220.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/monitor-calibration-kit.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 24,
+  "fields": {
+    "category": 2,
+    "name": "Quantum Dot Monitor",
+    "slug": "quantum-dot-monitor",
+    "description": "Quantum Dot Monitor is a high-quality item designed for comfort and performance in this category.",
+    "price": "1180.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/quantum-dot-monitor.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 25,
+  "fields": {
+    "category": 2,
+    "name": "OLED Monitor",
+    "slug": "oled-monitor",
+    "description": "OLED Monitor is a high-quality item designed for comfort and performance in this category.",
+    "price": "1110.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/oled-monitor.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 26,
+  "fields": {
+    "category": 2,
+    "name": "Budget Monitor",
+    "slug": "budget-monitor",
+    "description": "Budget Monitor is a high-quality item designed for comfort and performance in this category.",
+    "price": "1130.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/budget-monitor.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 27,
+  "fields": {
+    "category": 2,
+    "name": "Professional Color Monitor",
+    "slug": "professional-color-monitor",
+    "description": "Professional Color Monitor is a high-quality item designed for comfort and performance in this category.",
+    "price": "1250.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/professional-color-monitor.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 28,
+  "fields": {
+    "category": 2,
+    "name": "Montage Monitor",
+    "slug": "montage-monitor",
+    "description": "Montage Monitor is a high-quality item designed for comfort and performance in this category.",
+    "price": "1140.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/montage-monitor.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 29,
+  "fields": {
+    "category": 2,
+    "name": "VA Panel Monitor",
+    "slug": "va-panel-monitor",
+    "description": "VA Panel Monitor is a high-quality item designed for comfort and performance in this category.",
+    "price": "1150.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/va-panel-monitor.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 30,
+  "fields": {
+    "category": 2,
+    "name": "Dual Monitor Kit",
+    "slug": "dual-monitor-kit",
+    "description": "Dual Monitor Kit is a high-quality item designed for comfort and performance in this category.",
+    "price": "1150.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/dual-monitor-kit.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 31,
+  "fields": {
+    "category": 3,
+    "name": "Bluetooth Speaker",
+    "slug": "bluetooth-speaker",
+    "description": "Bluetooth Speaker is a high-quality item designed for comfort and performance in this category.",
+    "price": "1160.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/bluetooth-speaker.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 32,
+  "fields": {
+    "category": 3,
+    "name": "Portable Charger",
+    "slug": "portable-charger",
+    "description": "Portable Charger is a high-quality item designed for comfort and performance in this category.",
+    "price": "1150.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/portable-charger.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 33,
+  "fields": {
+    "category": 3,
+    "name": "Wireless Keyboard",
+    "slug": "wireless-keyboard",
+    "description": "Wireless Keyboard is a high-quality item designed for comfort and performance in this category.",
+    "price": "1160.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/wireless-keyboard.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 34,
+  "fields": {
+    "category": 3,
+    "name": "Noise Cancelling Earbuds",
+    "slug": "noise-cancelling-earbuds",
+    "description": "Noise Cancelling Earbuds is a high-quality item designed for comfort and performance in this category.",
+    "price": "1230.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/noise-cancelling-earbuds.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 35,
+  "fields": {
+    "category": 3,
+    "name": "Smart Home Hub",
+    "slug": "smart-home-hub",
+    "description": "Smart Home Hub is a high-quality item designed for comfort and performance in this category.",
+    "price": "1130.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/smart-home-hub.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 36,
+  "fields": {
+    "category": 3,
+    "name": "Fitness Tracker",
+    "slug": "fitness-tracker",
+    "description": "Fitness Tracker is a high-quality item designed for comfort and performance in this category.",
+    "price": "1140.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/fitness-tracker.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 37,
+  "fields": {
+    "category": 3,
+    "name": "4K Action Camera",
+    "slug": "4k-action-camera",
+    "description": "4K Action Camera is a high-quality item designed for comfort and performance in this category.",
+    "price": "1150.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/4k-action-camera.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 38,
+  "fields": {
+    "category": 3,
+    "name": "WiFi Range Extender",
+    "slug": "wifi-range-extender",
+    "description": "WiFi Range Extender is a high-quality item designed for comfort and performance in this category.",
+    "price": "1180.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/wifi-range-extender.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 39,
+  "fields": {
+    "category": 3,
+    "name": "Gaming Mouse",
+    "slug": "gaming-mouse",
+    "description": "Gaming Mouse is a high-quality item designed for comfort and performance in this category.",
+    "price": "1110.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/gaming-mouse.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 40,
+  "fields": {
+    "category": 3,
+    "name": "USB-C Docking Station",
+    "slug": "usb-c-docking-station",
+    "description": "USB-C Docking Station is a high-quality item designed for comfort and performance in this category.",
+    "price": "1200.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/usb-c-docking-station.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 41,
+  "fields": {
+    "category": 3,
+    "name": "Drone with Camera",
+    "slug": "drone-with-camera",
+    "description": "Drone with Camera is a high-quality item designed for comfort and performance in this category.",
+    "price": "1160.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/drone-with-camera.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 42,
+  "fields": {
+    "category": 3,
+    "name": "Smart Light Bulb",
+    "slug": "smart-light-bulb",
+    "description": "Smart Light Bulb is a high-quality item designed for comfort and performance in this category.",
+    "price": "1150.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/smart-light-bulb.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 43,
+  "fields": {
+    "category": 3,
+    "name": "VR Headset",
+    "slug": "vr-headset",
+    "description": "VR Headset is a high-quality item designed for comfort and performance in this category.",
+    "price": "1090.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/vr-headset.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 44,
+  "fields": {
+    "category": 3,
+    "name": "Digital Photo Frame",
+    "slug": "digital-photo-frame",
+    "description": "Digital Photo Frame is a high-quality item designed for comfort and performance in this category.",
+    "price": "1180.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/digital-photo-frame.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 45,
+  "fields": {
+    "category": 3,
+    "name": "Robot Vacuum",
+    "slug": "robot-vacuum",
+    "description": "Robot Vacuum is a high-quality item designed for comfort and performance in this category.",
+    "price": "1110.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/robot-vacuum.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 46,
+  "fields": {
+    "category": 3,
+    "name": "Electric Toothbrush",
+    "slug": "electric-toothbrush",
+    "description": "Electric Toothbrush is a high-quality item designed for comfort and performance in this category.",
+    "price": "1180.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/electric-toothbrush.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 47,
+  "fields": {
+    "category": 3,
+    "name": "Dash Cam",
+    "slug": "dash-cam",
+    "description": "Dash Cam is a high-quality item designed for comfort and performance in this category.",
+    "price": "1070.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/dash-cam.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 48,
+  "fields": {
+    "category": 3,
+    "name": "Wireless Router",
+    "slug": "wireless-router",
+    "description": "Wireless Router is a high-quality item designed for comfort and performance in this category.",
+    "price": "1140.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/wireless-router.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 49,
+  "fields": {
+    "category": 4,
+    "name": "Summer Dress",
+    "slug": "summer-dress",
+    "description": "Summer Dress is a high-quality item designed for comfort and performance in this category.",
+    "price": "1110.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/summer-dress.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 50,
+  "fields": {
+    "category": 4,
+    "name": "Denim Jeans",
+    "slug": "denim-jeans",
+    "description": "Denim Jeans is a high-quality item designed for comfort and performance in this category.",
+    "price": "1100.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/denim-jeans.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 51,
+  "fields": {
+    "category": 4,
+    "name": "Leather Jacket",
+    "slug": "leather-jacket",
+    "description": "Leather Jacket is a high-quality item designed for comfort and performance in this category.",
+    "price": "1130.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/leather-jacket.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 52,
+  "fields": {
+    "category": 4,
+    "name": "Casual T-Shirt",
+    "slug": "casual-t-shirt",
+    "description": "Casual T-Shirt is a high-quality item designed for comfort and performance in this category.",
+    "price": "1130.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/casual-t-shirt.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 53,
+  "fields": {
+    "category": 4,
+    "name": "Formal Blazer",
+    "slug": "formal-blazer",
+    "description": "Formal Blazer is a high-quality item designed for comfort and performance in this category.",
+    "price": "1120.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/formal-blazer.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 54,
+  "fields": {
+    "category": 4,
+    "name": "Winter Coat",
+    "slug": "winter-coat",
+    "description": "Winter Coat is a high-quality item designed for comfort and performance in this category.",
+    "price": "1100.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/winter-coat.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 55,
+  "fields": {
+    "category": 4,
+    "name": "Athletic Shorts",
+    "slug": "athletic-shorts",
+    "description": "Athletic Shorts is a high-quality item designed for comfort and performance in this category.",
+    "price": "1140.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/athletic-shorts.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 56,
+  "fields": {
+    "category": 4,
+    "name": "Silk Scarf",
+    "slug": "silk-scarf",
+    "description": "Silk Scarf is a high-quality item designed for comfort and performance in this category.",
+    "price": "1090.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/silk-scarf.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 57,
+  "fields": {
+    "category": 4,
+    "name": "Wool Sweater",
+    "slug": "wool-sweater",
+    "description": "Wool Sweater is a high-quality item designed for comfort and performance in this category.",
+    "price": "1110.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/wool-sweater.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 58,
+  "fields": {
+    "category": 4,
+    "name": "Sneaker Shoes",
+    "slug": "sneaker-shoes",
+    "description": "Sneaker Shoes is a high-quality item designed for comfort and performance in this category.",
+    "price": "1120.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/sneaker-shoes.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 59,
+  "fields": {
+    "category": 4,
+    "name": "Office Shirt",
+    "slug": "office-shirt",
+    "description": "Office Shirt is a high-quality item designed for comfort and performance in this category.",
+    "price": "1110.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/office-shirt.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 60,
+  "fields": {
+    "category": 4,
+    "name": "Chino Pants",
+    "slug": "chino-pants",
+    "description": "Chino Pants is a high-quality item designed for comfort and performance in this category.",
+    "price": "1100.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/chino-pants.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 61,
+  "fields": {
+    "category": 4,
+    "name": "Maxi Skirt",
+    "slug": "maxi-skirt",
+    "description": "Maxi Skirt is a high-quality item designed for comfort and performance in this category.",
+    "price": "1090.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/maxi-skirt.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 62,
+  "fields": {
+    "category": 4,
+    "name": "Crop Top",
+    "slug": "crop-top",
+    "description": "Crop Top is a high-quality item designed for comfort and performance in this category.",
+    "price": "1070.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/crop-top.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 63,
+  "fields": {
+    "category": 4,
+    "name": "Trench Coat",
+    "slug": "trench-coat",
+    "description": "Trench Coat is a high-quality item designed for comfort and performance in this category.",
+    "price": "1100.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/trench-coat.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 64,
+  "fields": {
+    "category": 4,
+    "name": "Suede Boots",
+    "slug": "suede-boots",
+    "description": "Suede Boots is a high-quality item designed for comfort and performance in this category.",
+    "price": "1100.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/suede-boots.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 65,
+  "fields": {
+    "category": 4,
+    "name": "Linen Shirt",
+    "slug": "linen-shirt",
+    "description": "Linen Shirt is a high-quality item designed for comfort and performance in this category.",
+    "price": "1100.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/linen-shirt.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 66,
+  "fields": {
+    "category": 4,
+    "name": "Graphic Hoodie",
+    "slug": "graphic-hoodie",
+    "description": "Graphic Hoodie is a high-quality item designed for comfort and performance in this category.",
+    "price": "1130.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/graphic-hoodie.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 67,
+  "fields": {
+    "category": 5,
+    "name": "Ceramic Vase",
+    "slug": "ceramic-vase",
+    "description": "Ceramic Vase is a high-quality item designed for comfort and performance in this category.",
+    "price": "1110.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/ceramic-vase.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 68,
+  "fields": {
+    "category": 5,
+    "name": "Memory Foam Pillow",
+    "slug": "memory-foam-pillow",
+    "description": "Memory Foam Pillow is a high-quality item designed for comfort and performance in this category.",
+    "price": "1170.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/memory-foam-pillow.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 69,
+  "fields": {
+    "category": 5,
+    "name": "Cotton Duvet Cover",
+    "slug": "cotton-duvet-cover",
+    "description": "Cotton Duvet Cover is a high-quality item designed for comfort and performance in this category.",
+    "price": "1170.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/cotton-duvet-cover.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 70,
+  "fields": {
+    "category": 5,
+    "name": "Kitchen Knife Set",
+    "slug": "kitchen-knife-set",
+    "description": "Kitchen Knife Set is a high-quality item designed for comfort and performance in this category.",
+    "price": "1160.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/kitchen-knife-set.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 71,
+  "fields": {
+    "category": 5,
+    "name": "Standing Lamp",
+    "slug": "standing-lamp",
+    "description": "Standing Lamp is a high-quality item designed for comfort and performance in this category.",
+    "price": "1120.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/standing-lamp.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 72,
+  "fields": {
+    "category": 5,
+    "name": "Bamboo Cutting Board",
+    "slug": "bamboo-cutting-board",
+    "description": "Bamboo Cutting Board is a high-quality item designed for comfort and performance in this category.",
+    "price": "1190.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/bamboo-cutting-board.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 73,
+  "fields": {
+    "category": 5,
+    "name": "Terracotta Planter",
+    "slug": "terracotta-planter",
+    "description": "Terracotta Planter is a high-quality item designed for comfort and performance in this category.",
+    "price": "1170.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/terracotta-planter.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 74,
+  "fields": {
+    "category": 5,
+    "name": "Velvet Cushion",
+    "slug": "velvet-cushion",
+    "description": "Velvet Cushion is a high-quality item designed for comfort and performance in this category.",
+    "price": "1130.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/velvet-cushion.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 75,
+  "fields": {
+    "category": 5,
+    "name": "Wall Art Print",
+    "slug": "wall-art-print",
+    "description": "Wall Art Print is a high-quality item designed for comfort and performance in this category.",
+    "price": "1130.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/wall-art-print.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 76,
+  "fields": {
+    "category": 5,
+    "name": "Nonstick Cookware",
+    "slug": "nonstick-cookware",
+    "description": "Nonstick Cookware is a high-quality item designed for comfort and performance in this category.",
+    "price": "1160.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/nonstick-cookware.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 77,
+  "fields": {
+    "category": 5,
+    "name": "Aromatherapy Diffuser",
+    "slug": "aromatherapy-diffuser",
+    "description": "Aromatherapy Diffuser is a high-quality item designed for comfort and performance in this category.",
+    "price": "1200.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/aromatherapy-diffuser.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 78,
+  "fields": {
+    "category": 5,
+    "name": "Shower Organizer",
+    "slug": "shower-organizer",
+    "description": "Shower Organizer is a high-quality item designed for comfort and performance in this category.",
+    "price": "1150.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/shower-organizer.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 79,
+  "fields": {
+    "category": 5,
+    "name": "Indoor Herb Garden Kit",
+    "slug": "indoor-herb-garden-kit",
+    "description": "Indoor Herb Garden Kit is a high-quality item designed for comfort and performance in this category.",
+    "price": "1210.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/indoor-herb-garden-kit.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 80,
+  "fields": {
+    "category": 5,
+    "name": "Storage Ottoman",
+    "slug": "storage-ottoman",
+    "description": "Storage Ottoman is a high-quality item designed for comfort and performance in this category.",
+    "price": "1140.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/storage-ottoman.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 81,
+  "fields": {
+    "category": 5,
+    "name": "Sleep Sound Machine",
+    "slug": "sleep-sound-machine",
+    "description": "Sleep Sound Machine is a high-quality item designed for comfort and performance in this category.",
+    "price": "1180.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/sleep-sound-machine.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 82,
+  "fields": {
+    "category": 5,
+    "name": "Air Purifier",
+    "slug": "air-purifier",
+    "description": "Air Purifier is a high-quality item designed for comfort and performance in this category.",
+    "price": "1110.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/air-purifier.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 83,
+  "fields": {
+    "category": 5,
+    "name": "Tabletop Clock",
+    "slug": "tabletop-clock",
+    "description": "Tabletop Clock is a high-quality item designed for comfort and performance in this category.",
+    "price": "1130.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/tabletop-clock.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 84,
+  "fields": {
+    "category": 5,
+    "name": "Wooden Serving Tray",
+    "slug": "wooden-serving-tray",
+    "description": "Wooden Serving Tray is a high-quality item designed for comfort and performance in this category.",
+    "price": "1180.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/wooden-serving-tray.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 85,
+  "fields": {
+    "category": 6,
+    "name": "Trail Running Shoes",
+    "slug": "trail-running-shoes",
+    "description": "Trail Running Shoes is a high-quality item designed for comfort and performance in this category.",
+    "price": "1180.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/trail-running-shoes.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 86,
+  "fields": {
+    "category": 6,
+    "name": "Basketball",
+    "slug": "basketball",
+    "description": "Basketball is a high-quality item designed for comfort and performance in this category.",
+    "price": "1090.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/basketball.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 87,
+  "fields": {
+    "category": 6,
+    "name": "Yoga Mat",
+    "slug": "yoga-mat-2",
+    "description": "Yoga Mat is a high-quality item designed for comfort and performance in this category.",
+    "price": "1070.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/yoga-mat-2.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 88,
+  "fields": {
+    "category": 6,
+    "name": "Cycling Helmet",
+    "slug": "cycling-helmet",
+    "description": "Cycling Helmet is a high-quality item designed for comfort and performance in this category.",
+    "price": "1130.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/cycling-helmet.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 89,
+  "fields": {
+    "category": 6,
+    "name": "Fitness Resistance Bands",
+    "slug": "fitness-resistance-bands",
+    "description": "Fitness Resistance Bands is a high-quality item designed for comfort and performance in this category.",
+    "price": "1230.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/fitness-resistance-bands.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 90,
+  "fields": {
+    "category": 6,
+    "name": "Camping Backpack",
+    "slug": "camping-backpack",
+    "description": "Camping Backpack is a high-quality item designed for comfort and performance in this category.",
+    "price": "1150.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/camping-backpack.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 91,
+  "fields": {
+    "category": 6,
+    "name": "Tennis Racket",
+    "slug": "tennis-racket",
+    "description": "Tennis Racket is a high-quality item designed for comfort and performance in this category.",
+    "price": "1120.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/images_46.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-07T20:59:11.129Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 92,
+  "fields": {
+    "category": 6,
+    "name": "Soccer Cleats",
+    "slug": "soccer-cleats",
+    "description": "Soccer Cleats is a high-quality item designed for comfort and performance in this category.",
+    "price": "1120.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/soccer-cleats.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 93,
+  "fields": {
+    "category": 6,
+    "name": "Swimming Goggles",
+    "slug": "swimming-goggles",
+    "description": "Swimming Goggles is a high-quality item designed for comfort and performance in this category.",
+    "price": "1150.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/swimming-goggles.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 94,
+  "fields": {
+    "category": 6,
+    "name": "Golf Gloves",
+    "slug": "golf-gloves",
+    "description": "Golf Gloves is a high-quality item designed for comfort and performance in this category.",
+    "price": "1100.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/golf-gloves.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 95,
+  "fields": {
+    "category": 6,
+    "name": "Boxing Gloves",
+    "slug": "boxing-gloves",
+    "description": "Boxing Gloves is a high-quality item designed for comfort and performance in this category.",
+    "price": "1120.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/boxing-gloves.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 96,
+  "fields": {
+    "category": 6,
+    "name": "Hiking Boots",
+    "slug": "hiking-boots",
+    "description": "Hiking Boots is a high-quality item designed for comfort and performance in this category.",
+    "price": "1110.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/hiking-boots.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 97,
+  "fields": {
+    "category": 6,
+    "name": "Foldable Bike",
+    "slug": "foldable-bike",
+    "description": "Foldable Bike is a high-quality item designed for comfort and performance in this category.",
+    "price": "1120.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/foldable-bike.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 98,
+  "fields": {
+    "category": 6,
+    "name": "Climbing Chalk Bag",
+    "slug": "climbing-chalk-bag",
+    "description": "Climbing Chalk Bag is a high-quality item designed for comfort and performance in this category.",
+    "price": "1170.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/climbing-chalk-bag.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 99,
+  "fields": {
+    "category": 6,
+    "name": "Fitness Tracker Band",
+    "slug": "fitness-tracker-band",
+    "description": "Fitness Tracker Band is a high-quality item designed for comfort and performance in this category.",
+    "price": "1190.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/fitness-tracker-band.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 100,
+  "fields": {
+    "category": 6,
+    "name": "Rowing Machine",
+    "slug": "rowing-machine",
+    "description": "Rowing Machine is a high-quality item designed for comfort and performance in this category.",
+    "price": "1130.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/rowing-machine.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 101,
+  "fields": {
+    "category": 6,
+    "name": "Skateboard",
+    "slug": "skateboard",
+    "description": "Skateboard is a high-quality item designed for comfort and performance in this category.",
+    "price": "1090.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/skateboard.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 102,
+  "fields": {
+    "category": 6,
+    "name": "Ski Goggles",
+    "slug": "ski-goggles",
+    "description": "Ski Goggles is a high-quality item designed for comfort and performance in this category.",
+    "price": "1100.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/ski-goggles.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 103,
+  "fields": {
+    "category": 7,
+    "name": "Mystery Thriller Novel",
+    "slug": "mystery-thriller-novel",
+    "description": "Mystery Thriller Novel is a high-quality item designed for comfort and performance in this category.",
+    "price": "1210.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/mystery-thriller-novel.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 104,
+  "fields": {
+    "category": 7,
+    "name": "Science Fiction Saga",
+    "slug": "science-fiction-saga",
+    "description": "Science Fiction Saga is a high-quality item designed for comfort and performance in this category.",
+    "price": "1190.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/science-fiction-saga.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 105,
+  "fields": {
+    "category": 7,
+    "name": "Romantic Poetry Collection",
+    "slug": "romantic-poetry-collection",
+    "description": "Romantic Poetry Collection is a high-quality item designed for comfort and performance in this category.",
+    "price": "1250.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/romantic-poetry-collection.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 106,
+  "fields": {
+    "category": 7,
+    "name": "Business Strategy Guide",
+    "slug": "business-strategy-guide",
+    "description": "Business Strategy Guide is a high-quality item designed for comfort and performance in this category.",
+    "price": "1220.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/business-strategy-guide.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 107,
+  "fields": {
+    "category": 7,
+    "name": "Healthy Cooking Recipes",
+    "slug": "healthy-cooking-recipes",
+    "description": "Healthy Cooking Recipes is a high-quality item designed for comfort and performance in this category.",
+    "price": "1220.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/healthy-cooking-recipes.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 108,
+  "fields": {
+    "category": 7,
+    "name": "Travel Adventure Memoir",
+    "slug": "travel-adventure-memoir",
+    "description": "Travel Adventure Memoir is a high-quality item designed for comfort and performance in this category.",
+    "price": "1220.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/travel-adventure-memoir.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 109,
+  "fields": {
+    "category": 7,
+    "name": "Self-Improvement Workbook",
+    "slug": "self-improvement-workbook",
+    "description": "Self-Improvement Workbook is a high-quality item designed for comfort and performance in this category.",
+    "price": "1240.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/self-improvement-workbook.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 110,
+  "fields": {
+    "category": 7,
+    "name": "History of Art",
+    "slug": "history-of-art",
+    "description": "History of Art is a high-quality item designed for comfort and performance in this category.",
+    "price": "1130.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/history-of-art.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 111,
+  "fields": {
+    "category": 7,
+    "name": "Children Storybook",
+    "slug": "children-storybook",
+    "description": "Children Storybook is a high-quality item designed for comfort and performance in this category.",
+    "price": "1170.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/children-storybook.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 112,
+  "fields": {
+    "category": 7,
+    "name": "Graphic Novel",
+    "slug": "graphic-novel",
+    "description": "Graphic Novel is a high-quality item designed for comfort and performance in this category.",
+    "price": "1120.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/graphic-novel.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 113,
+  "fields": {
+    "category": 7,
+    "name": "Fantasy Epic",
+    "slug": "fantasy-epic",
+    "description": "Fantasy Epic is a high-quality item designed for comfort and performance in this category.",
+    "price": "1110.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/fantasy-epic.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 114,
+  "fields": {
+    "category": 7,
+    "name": "Photography Handbook",
+    "slug": "photography-handbook",
+    "description": "Photography Handbook is a high-quality item designed for comfort and performance in this category.",
+    "price": "1190.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/photography-handbook.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 115,
+  "fields": {
+    "category": 7,
+    "name": "Language Learning Guide",
+    "slug": "language-learning-guide",
+    "description": "Language Learning Guide is a high-quality item designed for comfort and performance in this category.",
+    "price": "1220.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/language-learning-guide.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 116,
+  "fields": {
+    "category": 7,
+    "name": "Personal Finance Manual",
+    "slug": "personal-finance-manual",
+    "description": "Personal Finance Manual is a high-quality item designed for comfort and performance in this category.",
+    "price": "1220.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/personal-finance-manual.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 117,
+  "fields": {
+    "category": 7,
+    "name": "Gardening Tips Book",
+    "slug": "gardening-tips-book",
+    "description": "Gardening Tips Book is a high-quality item designed for comfort and performance in this category.",
+    "price": "1180.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/gardening-tips-book.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 118,
+  "fields": {
+    "category": 7,
+    "name": "Music Theory Textbook",
+    "slug": "music-theory-textbook",
+    "description": "Music Theory Textbook is a high-quality item designed for comfort and performance in this category.",
+    "price": "1200.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/music-theory-textbook.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 119,
+  "fields": {
+    "category": 7,
+    "name": "Biology Illustrated",
+    "slug": "biology-illustrated",
+    "description": "Biology Illustrated is a high-quality item designed for comfort and performance in this category.",
+    "price": "1180.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/biology-illustrated.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 120,
+  "fields": {
+    "category": 7,
+    "name": "Philosophy Primer",
+    "slug": "philosophy-primer",
+    "description": "Philosophy Primer is a high-quality item designed for comfort and performance in this category.",
+    "price": "1160.00",
+    "compare_price": null,
+    "stock": 50,
+    "image": "products/main/philosophy-primer.png",
+    "is_active": true,
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-08-03T18:37:03Z",
+    "updated_at": "2026-08-03T18:37:03Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 1,
+  "fields": {
+    "product": 17,
+    "image": "products/gallery/images_28.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 2,
+  "fields": {
+    "product": 15,
+    "image": "products/gallery/images_26.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 3,
+  "fields": {
+    "product": 37,
+    "image": "products/gallery/images_53.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 4,
+  "fields": {
+    "product": 14,
+    "image": "products/gallery/images_25.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 5,
+  "fields": {
+    "product": 82,
+    "image": "products/gallery/images_54.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 6,
+  "fields": {
+    "product": 77,
+    "image": "products/gallery/images_55.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 7,
+  "fields": {
+    "product": 55,
+    "image": "products/gallery/images_56.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 8,
+  "fields": {
+    "product": 72,
+    "image": "products/gallery/images_57.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 9,
+  "fields": {
+    "product": 86,
+    "image": "products/gallery/images_58.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 10,
+  "fields": {
+    "product": 119,
+    "image": "products/gallery/images_33.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 11,
+  "fields": {
+    "product": 31,
+    "image": "products/gallery/images_59.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 12,
+  "fields": {
+    "product": 95,
+    "image": "products/gallery/images_60.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 13,
+  "fields": {
+    "product": 26,
+    "image": "products/gallery/images_61.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 14,
+  "fields": {
+    "product": 18,
+    "image": "products/gallery/images_29.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 15,
+  "fields": {
+    "product": 106,
+    "image": "products/gallery/images_62.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 16,
+  "fields": {
+    "product": 90,
+    "image": "products/gallery/images_63.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 17,
+  "fields": {
+    "product": 4,
+    "image": "products/gallery/images_17_o1H5EyQ.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 18,
+  "fields": {
+    "product": 52,
+    "image": "products/gallery/images_64.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 19,
+  "fields": {
+    "product": 67,
+    "image": "products/gallery/images_65.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 20,
+  "fields": {
+    "product": 111,
+    "image": "products/gallery/images_41.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 21,
+  "fields": {
+    "product": 60,
+    "image": "products/gallery/images_92.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 22,
+  "fields": {
+    "product": 98,
+    "image": "products/gallery/images_77.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 23,
+  "fields": {
+    "product": 69,
+    "image": "products/gallery/images_86.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 24,
+  "fields": {
+    "product": 11,
+    "image": "products/gallery/images_23.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 25,
+  "fields": {
+    "product": 62,
+    "image": "products/gallery/images_90.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 26,
+  "fields": {
+    "product": 88,
+    "image": "products/gallery/images_82.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 27,
+  "fields": {
+    "product": 47,
+    "image": "products/gallery/images_97.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 28,
+  "fields": {
+    "product": 50,
+    "image": "products/gallery/images_96.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 29,
+  "fields": {
+    "product": 44,
+    "image": "products/gallery/images_99.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 30,
+  "fields": {
+    "product": 41,
+    "image": "products/gallery/images_100.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 31,
+  "fields": {
+    "product": 30,
+    "image": "products/gallery/images_-_2026-08-08T015022.002.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 32,
+  "fields": {
+    "product": 46,
+    "image": "products/gallery/images_98.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 33,
+  "fields": {
+    "product": 7,
+    "image": "products/gallery/images_20.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 34,
+  "fields": {
+    "product": 20,
+    "image": "products/gallery/images_31.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 35,
+  "fields": {
+    "product": 113,
+    "image": "products/gallery/images_39.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 36,
+  "fields": {
+    "product": 89,
+    "image": "products/gallery/images_81.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 37,
+  "fields": {
+    "product": 36,
+    "image": "products/gallery/images_-_2026-08-08T014844.477.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 38,
+  "fields": {
+    "product": 99,
+    "image": "products/gallery/images.png",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 39,
+  "fields": {
+    "product": 97,
+    "image": "products/gallery/images_78.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 40,
+  "fields": {
+    "product": 53,
+    "image": "products/gallery/images_94.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 41,
+  "fields": {
+    "product": 12,
+    "image": "products/gallery/images_24.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 42,
+  "fields": {
+    "product": 39,
+    "image": "products/gallery/images_-_2026-08-08T014725.415.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 43,
+  "fields": {
+    "product": 117,
+    "image": "products/gallery/images_35.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 44,
+  "fields": {
+    "product": 94,
+    "image": "products/gallery/images_80.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 45,
+  "fields": {
+    "product": 66,
+    "image": "products/gallery/images_88.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 46,
+  "fields": {
+    "product": 112,
+    "image": "products/gallery/images_40.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 47,
+  "fields": {
+    "product": 107,
+    "image": "https://picsum.photos/seed/healthy-cooking-recipes-gallery/640/480",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 48,
+  "fields": {
+    "product": 96,
+    "image": "products/gallery/images_79.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 49,
+  "fields": {
+    "product": 110,
+    "image": "https://picsum.photos/seed/history-of-art-gallery/640/480",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 50,
+  "fields": {
+    "product": 79,
+    "image": "products/gallery/images_83.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 51,
+  "fields": {
+    "product": 70,
+    "image": "products/gallery/images_85.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 52,
+  "fields": {
+    "product": 115,
+    "image": "products/gallery/images_37.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 53,
+  "fields": {
+    "product": 5,
+    "image": "products/gallery/images_18.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 54,
+  "fields": {
+    "product": 51,
+    "image": "products/gallery/images_95.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 55,
+  "fields": {
+    "product": 65,
+    "image": "products/gallery/images_89.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 56,
+  "fields": {
+    "product": 61,
+    "image": "products/gallery/images_91.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 57,
+  "fields": {
+    "product": 68,
+    "image": "products/gallery/images_87.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 58,
+  "fields": {
+    "product": 6,
+    "image": "products/gallery/images_19.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 59,
+  "fields": {
+    "product": 23,
+    "image": "products/gallery/images_-_2026-08-08T015527.977.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 60,
+  "fields": {
+    "product": 19,
+    "image": "products/gallery/images_30.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 61,
+  "fields": {
+    "product": 22,
+    "image": "products/gallery/images_-_2026-08-08T015618.357.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 62,
+  "fields": {
+    "product": 28,
+    "image": "products/gallery/images_-_2026-08-08T015137.794.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 63,
+  "fields": {
+    "product": 118,
+    "image": "products/gallery/images_34.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 64,
+  "fields": {
+    "product": 103,
+    "image": "https://picsum.photos/seed/mystery-thriller-novel-gallery/640/480",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 65,
+  "fields": {
+    "product": 34,
+    "image": "products/gallery/images_-_2026-08-08T014917.641.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 66,
+  "fields": {
+    "product": 76,
+    "image": "products/gallery/images_84.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 67,
+  "fields": {
+    "product": 59,
+    "image": "products/gallery/images_93.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 68,
+  "fields": {
+    "product": 25,
+    "image": "products/gallery/images_-_2026-08-08T015338.208.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 69,
+  "fields": {
+    "product": 116,
+    "image": "products/gallery/images_36.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 70,
+  "fields": {
+    "product": 120,
+    "image": "products/gallery/images_32.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 71,
+  "fields": {
+    "product": 114,
+    "image": "products/gallery/images_38.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 72,
+  "fields": {
+    "product": 32,
+    "image": "products/gallery/images_-_2026-08-08T014948.946.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 73,
+  "fields": {
+    "product": 16,
+    "image": "products/gallery/images_27.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 74,
+  "fields": {
+    "product": 27,
+    "image": "products/gallery/images_-_2026-08-08T015304.708.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 75,
+  "fields": {
+    "product": 10,
+    "image": "products/gallery/images_22.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 76,
+  "fields": {
+    "product": 24,
+    "image": "products/gallery/images_-_2026-08-08T015452.297.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 77,
+  "fields": {
+    "product": 45,
+    "image": "products/gallery/download_1.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 78,
+  "fields": {
+    "product": 105,
+    "image": "https://picsum.photos/seed/romantic-poetry-collection-gallery/640/480",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 79,
+  "fields": {
+    "product": 100,
+    "image": "products/gallery/images_76.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 80,
+  "fields": {
+    "product": 8,
+    "image": "products/gallery/images_21.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 81,
+  "fields": {
+    "product": 104,
+    "image": "products/gallery/images_75.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 82,
+  "fields": {
+    "product": 109,
+    "image": "products/gallery/images_74.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 83,
+  "fields": {
+    "product": 78,
+    "image": "products/gallery/images_73.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 84,
+  "fields": {
+    "product": 56,
+    "image": "products/gallery/images_72.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 85,
+  "fields": {
+    "product": 101,
+    "image": "products/gallery/images_71.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 86,
+  "fields": {
+    "product": 102,
+    "image": "products/gallery/images_70.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 87,
+  "fields": {
+    "product": 81,
+    "image": "products/gallery/images_69.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 88,
+  "fields": {
+    "product": 35,
+    "image": "products/gallery/images_68.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 89,
+  "fields": {
+    "product": 42,
+    "image": "products/gallery/images_67.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 90,
+  "fields": {
+    "product": 3,
+    "image": "products/gallery/images_16_EYMM2fn.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 91,
+  "fields": {
+    "product": 58,
+    "image": "products/gallery/images_66.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 92,
+  "fields": {
+    "product": 92,
+    "image": "products/gallery/download.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 93,
+  "fields": {
+    "product": 71,
+    "image": "products/gallery/images_52.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 94,
+  "fields": {
+    "product": 80,
+    "image": "products/gallery/images_51.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 95,
+  "fields": {
+    "product": 64,
+    "image": "products/gallery/images_50.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 96,
+  "fields": {
+    "product": 49,
+    "image": "products/gallery/images_49.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 97,
+  "fields": {
+    "product": 93,
+    "image": "products/gallery/images_48.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 98,
+  "fields": {
+    "product": 83,
+    "image": "products/gallery/images_47.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 99,
+  "fields": {
+    "product": 91,
+    "image": "products/gallery/images_46.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 100,
+  "fields": {
+    "product": 73,
+    "image": "products/gallery/images_45.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 101,
+  "fields": {
+    "product": 21,
+    "image": "products/gallery/images_44.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 102,
+  "fields": {
+    "product": 85,
+    "image": "products/gallery/images_43.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 103,
+  "fields": {
+    "product": 108,
+    "image": "products/gallery/images_42.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 104,
+  "fields": {
+    "product": 63,
+    "image": "products/gallery/images_15.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 105,
+  "fields": {
+    "product": 13,
+    "image": "products/gallery/images_14.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 106,
+  "fields": {
+    "product": 40,
+    "image": "products/gallery/images_13.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 107,
+  "fields": {
+    "product": 29,
+    "image": "products/gallery/images_12.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 108,
+  "fields": {
+    "product": 74,
+    "image": "products/gallery/images_11.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 109,
+  "fields": {
+    "product": 43,
+    "image": "products/gallery/images_10.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 110,
+  "fields": {
+    "product": 75,
+    "image": "products/gallery/images_9.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 111,
+  "fields": {
+    "product": 38,
+    "image": "products/gallery/images_8.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 112,
+  "fields": {
+    "product": 54,
+    "image": "products/gallery/images_7.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 113,
+  "fields": {
+    "product": 2,
+    "image": "products/gallery/images_6.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 114,
+  "fields": {
+    "product": 33,
+    "image": "products/gallery/images_5.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 115,
+  "fields": {
+    "product": 48,
+    "image": "products/gallery/images_4.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 116,
+  "fields": {
+    "product": 84,
+    "image": "products/gallery/images_3.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 117,
+  "fields": {
+    "product": 57,
+    "image": "products/gallery/images_2.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 118,
+  "fields": {
+    "product": 9,
+    "image": "products/gallery/images_1.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+},
+{
+  "model": "store.productimage",
+  "pk": 119,
+  "fields": {
+    "product": 87,
+    "image": "products/gallery/images.jpg",
+    "created_at": "2026-08-03T18:49:08Z"
+  }
+}
+]

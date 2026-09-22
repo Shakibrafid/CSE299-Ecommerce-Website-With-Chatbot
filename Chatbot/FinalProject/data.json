@@ -1,0 +1,156 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-07-09T11:04:14.208Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "1",
+    "object_repr": "Monitor",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-07-09T11:09:26.965Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "1",
+    "object_repr": "Monitor",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-07-09T11:49:20.865Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "1",
+    "object_repr": "Order ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-07-20T00:13:15.597Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "monitor",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-07-20T00:14:35.053Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "1",
+    "object_repr": "dell",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "134v2u2p2g9v6l2k7nu69pg016792v7p",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGFsqV49O43kF1YpGogKe3J-O9K0oNe5jDvzbyEx33Lfm-8-iWKs1Di9NsRhgeXDuIdy63KUMu2LiS7Ig_a5LVGfl4O9-8gY8t97SJMM2tmFbQdDVgNYyDGwaIhQw6dImMg2Gi_AdOQUKmoXMI5AZB4fwDmBzgF:1whmWw:vkNfKkrOS-1eHBfi4v5jn2YLYtgKKyWzLAXA2yV06oc",
+    "expire_date": "2026-07-23T11:02:58.777Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "nhb4lopevk84k95ff860wf9kf0rm9bcf",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGFsqV49O43kF1YpGogKe3J-O9K0oNe5jDvzbyEx33Lfm-8-iWKs1Di9NsRhgeXDuIdy63KUMu2LiS7Ig_a5LVGfl4O9-8gY8t97SJMM2tmFbQdDVgNYyDGwaIhQw6dImMg2Gi_AdOQUKmoXMI5AZB4fwDmBzgF:1whmXB:KwLwC_PPmYldg1GtOMSK57OOxMkKDIoyA4MD98RCNfs",
+    "expire_date": "2026-07-23T11:03:13.248Z"
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$MNjiK4BeGPov3lO4ismbNO$G+uR9vlYncuw9WK3JndywIl3JoHQQasmVn+sBzZwqW4=",
+    "last_login": "2026-07-09T11:03:13.247Z",
+    "is_superuser": true,
+    "username": "rahat",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-07-09T11:02:47.321Z",
+    "created_by": null,
+    "email": "rahat@gmail.com",
+    "phone": null,
+    "is_guest": false,
+    "is_customer": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "order_number": "",
+    "status": "pending",
+    "tax": "0.00",
+    "discount": "0.00",
+    "shipping_address": "dhaka",
+    "billing_address": "dhaka",
+    "payment_method": "bkash",
+    "payment_status": "pending",
+    "notes": "nos",
+    "created_at": "2026-07-09T11:49:20.862Z",
+    "updated_at": "2026-07-09T11:49:20.862Z"
+  }
+},
+{
+  "model": "store.category",
+  "pk": 2,
+  "fields": {
+    "name": "monitor",
+    "slug": "monitor",
+    "description": "monitor is a device",
+    "parent": null,
+    "image": "",
+    "is_active": true,
+    "created_at": "2026-07-20T00:13:15.596Z",
+    "updated_at": "2026-07-20T00:13:15.596Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 1,
+  "fields": {
+    "category": 2,
+    "name": "dell",
+    "slug": "dell",
+    "description": "dell is a good brand",
+    "price": "50000.00",
+    "compare_price": null,
+    "stock": 100,
+    "image": "",
+    "is_active": true,
+    "is_featured": true,
+    "views": 0,
+    "created_at": "2026-07-20T00:14:35.053Z",
+    "updated_at": "2026-07-20T00:14:35.053Z"
+  }
+}
+]
