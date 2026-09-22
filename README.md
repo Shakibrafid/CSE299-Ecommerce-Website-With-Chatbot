@@ -11,7 +11,7 @@ Project repo for all 4 members of cse299 section3,group4.
    ```
 2. Install Python dependencies if needed:
    ```bash
-   python -m pip install -r ../requirements.txt
+   python -m pip install -r requirements.txt
    ```
 3. Run the Django server:
    ```bash
@@ -22,7 +22,7 @@ Project repo for all 4 members of cse299 section3,group4.
 
 1. Open another terminal and go to the frontend folder:
    ```bash
-   cd my-app
+   cd Front
    ```
 2. Install Node dependencies if needed:
    ```bash
