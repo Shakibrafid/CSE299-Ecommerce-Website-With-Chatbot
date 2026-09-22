@@ -4,7 +4,7 @@ import { API_BASE, getJsonHeaders } from "../apiConfig";
 function Chat() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([
-    { sender: "AI", text: "Hello! How can I assist you today?" }
+    { sender: "AI", text: "Tell me your budget or what you need the product for, and I will recommend the best matches from our catalog." }
   ]);
 
   async function sendMessage(e) {
@@ -28,7 +28,7 @@ function Chat() {
         return;
       }
 
-      setMessages((prev) => [...prev, { sender: "AI", text: data.reply }]);
+      setMessages((prev) => [...prev, { sender: "AI", text: data.reply, products: data.products || [] }]);
     } catch {
       setMessages((prev) => [...prev, { sender: "AI", text: "Unable to connect to the server." }]);
     }
@@ -54,7 +54,26 @@ function Chat() {
                     : "bg-white border border-gray-200 text-gray-800 rounded-bl-sm"
                 }`}
               >
-                {msg.text}
+                <>
+                  <span>{msg.text}</span>
+                  {msg.products?.length > 0 && (
+                    <div className="mt-3 space-y-2">
+                      {msg.products.map((product) => (
+                        <a
+                          key={product.id}
+                          href={`/products/${product.id}`}
+                          className="block rounded-xl border border-gray-200 p-3 hover:border-indigo-400 transition"
+                        >
+                          <div className="flex items-center justify-between gap-3">
+                            <strong>{product.name}</strong>
+                            <span className="font-semibold">৳{product.price}</span>
+                          </div>
+                          <small className="text-gray-500">{product.category} · {product.stock} in stock</small>
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </>
               </div>
             </div>
           ))}
